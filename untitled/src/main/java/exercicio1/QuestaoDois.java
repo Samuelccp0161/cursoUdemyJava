@@ -1,4 +1,4 @@
-package org.example;
+package exercicio1;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -8,16 +8,16 @@ public class QuestaoDois {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
-        Double pi, raio, area;
+        double raio = scanner.nextDouble();
 
-        pi = 3.14159;
-        raio = scanner.nextDouble();
-
-
-        area = pi * Math.pow(raio, 2);
-
-        System.out.println(area);
+        System.out.println(areaCirculo(raio));
 
         scanner.close();
     }
+    public static double areaCirculo(double raio){
+        double pi = 3.14159;
+
+        return pi * Math.pow(raio, 2);
+    }
 }
+

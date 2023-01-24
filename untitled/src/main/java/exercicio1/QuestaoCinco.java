@@ -1,4 +1,4 @@
-package org.example;
+package exercicio1;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -8,22 +8,15 @@ public class QuestaoCinco {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
-        int codPecaUm, quantPecaUm;
-        int codPecaDois, quantPecaDois;
-        Double valorPecaUm, valorPecaDois, valorDasPecas;
+        int quantPecaUm = scanner.nextInt(), quantPecaDois = scanner.nextInt();
+        double valorPecaUm = scanner.nextDouble(), valorPecaDois = scanner.nextDouble();
 
-        codPecaUm = scanner.nextInt();
-        quantPecaUm = scanner.nextInt();
-        valorPecaUm = scanner.nextDouble();
-
-        codPecaDois = scanner.nextInt();
-        quantPecaDois = scanner.nextInt();
-        valorPecaDois = scanner.nextDouble();
-
-        valorDasPecas = (valorPecaUm * quantPecaUm) + (valorPecaDois * quantPecaDois);
-
-        System.out.println(valorDasPecas);
+        System.out.println(valorPecas(quantPecaUm, quantPecaDois,valorPecaUm, valorPecaDois));
 
         scanner.close();
+    }
+    public static double valorPecas(int qtdPecaUm, int qtdPecaDois, double valorPecaUm, double valorPecaDois){
+        double valorTotalPecas = (valorPecaUm * qtdPecaUm) + (valorPecaDois * qtdPecaDois);
+        return valorTotalPecas;
     }
 }

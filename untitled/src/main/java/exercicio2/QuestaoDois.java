@@ -10,16 +10,17 @@ public class QuestaoDois {
         int numero;
         numero = scanner.nextInt();
 
-        if (numero % 2 == 0)
-            System.out.println(numero + " é par");
-        else
-            System.out.println(numero + " é impar");
+        paridade(numero);
 
         scanner.close();
 
     }
 
-    public static String paridade(int n) {
-        return ""; // "PAR" OU "IMPAR"
+    public static int paridade(int numero) {
+        if (numero % 2 == 0)
+            System.out.println(numero + " é par");
+        else
+            System.out.println(numero + " é impar");
+        return numero;
     }
 }
