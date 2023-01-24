@@ -6,9 +6,13 @@ public class QuestaoSeis {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        Double valor;
-        valor = scanner.nextDouble();
+        double valor = scanner.nextDouble();
 
+        intervalos(valor);
+
+        scanner.close();
+    }
+    public static boolean intervalos(double valor){
         if (valor < 0.00 || valor > 100){
             System.out.println("Fora do intervalo");
         } else if (valor <= 25.00) {
@@ -20,6 +24,6 @@ public class QuestaoSeis {
         } else if (valor <= 100.00) {
             System.out.println("Intervalo (75.100)");
         }
-        scanner.close();
+        return true;
     }
 }

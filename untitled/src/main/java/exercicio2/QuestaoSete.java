@@ -6,12 +6,13 @@ public class QuestaoSete {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        Double x;
-        Double y;
+        double x = scanner.nextDouble();
+        double y = scanner.nextDouble();
 
-        x = scanner.nextDouble();
-        y = scanner.nextDouble();
 
+        scanner.close();
+    }
+    public static boolean cartesiano(double x, double y){
         if (x == 0 && y == 0){
             System.out.println("ORIGEM");
         } else if (x >= 0.01 && y >= 0.01) {
@@ -23,6 +24,6 @@ public class QuestaoSete {
         } else if (x >= 0.01 && y <= -0.01){
             System.out.println("Q4");
         }
-        scanner.close();
+        return true;
     }
 }
