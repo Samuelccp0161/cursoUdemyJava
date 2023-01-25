@@ -7,13 +7,8 @@ import static org.junit.Assert.*;
 public class QuestaoQuatroTest {
     @Test
     public void diferencaHorasTest(){
-        int horasInicial = 2;
-        int horasFinal = 16;
-        int horasMaxima = 24;
-        int horasMinima = 0;
-
-        assertTrue(QuestaoQuatro.diferencaHoras(horasFinal,horasInicial));
-        assertTrue(QuestaoQuatro.diferencaHoras(horasMinima, horasMaxima));
-        assertTrue(QuestaoQuatro.diferencaHoras(horasFinal, horasInicial));
+        assertEquals(10, QuestaoQuatro.diferencaHoras(16,2));
+        assertEquals(24, QuestaoQuatro.diferencaHoras(0,0));
+        assertEquals(14, QuestaoQuatro.diferencaHoras(2, 16));
     }
 }

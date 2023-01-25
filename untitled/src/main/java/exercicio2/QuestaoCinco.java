@@ -13,25 +13,24 @@ public class QuestaoCinco {
 
         scanner.close();
     }
-    public static boolean lancheValor(int cod, int quantidade){
+    public static double lancheValor(int cod, int quantidade){
         double valorLanche = 0;
+        double resultado = 0;
+        double valor = 0;
+
         if (cod == 1){
-            Double valor = 4.00;
-            System.out.println(valor * quantidade);
-        }if (cod == 2){
-            Double valor = 4.50;
-            System.out.println(valor * quantidade);
-        }if (cod == 3){
-            Double valor = 5.00;
-            System.out.println(valor * quantidade);
-        }if (cod == 4){
-            Double valor = 2.00;
-            System.out.println(quantidade * valor);
-        }if(cod == 5){
-            Double valor = 1.50;
-            System.out.println(quantidade * valor);
+            valor = 4.00;
+        }else if (cod == 2){
+            valor = 4.50;
+        }else if (cod == 3){
+            valor = 5.00;
+        }else if (cod == 4){
+            valor = 2.00;
+        }else if(cod == 5){
+            valor = 1.50;
         }else
             System.out.println("Por favor Digite um codigo valido");
-        return true;
+
+        return valor * quantidade;
     }
 }

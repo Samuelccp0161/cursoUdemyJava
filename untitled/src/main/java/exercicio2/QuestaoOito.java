@@ -12,16 +12,16 @@ public class QuestaoOito {
 
         scanner.close();
     }
-    public static boolean impostoRenda(double salario){
+    public static String impostoRenda(double salario){
         if (salario <= 2000.00){
-            System.out.println("isento");
+            return "Isento";
         } else if (salario <= 3000.00) {
-            System.out.println((salario - 2000) * 0.08) ;
+            return (salario - 2000) * 0.08 + "" ;
         } else if (salario <= 4500.00){
-            System.out.println((salario - 3000) * 0.18 + 80);
+            return (salario - 3000) * 0.18 + 80 + "";
         }else if (salario > 4500){
-            System.out.printf("%.2f", (salario - 4500) * 0.28 + 80 + 270 );
+            return (salario - 4500) * 0.28 + 80 + 270 + "";
         }
-        return true;
+        return "";
     }
 }

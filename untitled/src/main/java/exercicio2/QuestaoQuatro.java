@@ -14,19 +14,19 @@ public class QuestaoQuatro {
 
         scanner.close();
     }
-    public static boolean diferencaHoras(int horasInicial, int horasFinal){
-        int valorMaxima = 24;
+    public static int diferencaHoras(int horasInicial, int horasFinal){
+        int valorMaximo = 24;
         int valorMinimo = 0;
-        int resultado;
+        int resultado = 0;
 
         if (horasInicial > horasFinal) {
-            valorMinimo = valorMaxima - horasInicial;
+            valorMinimo = valorMaximo - horasInicial;
             resultado = valorMinimo + horasFinal;
-            System.out.println(resultado);
         } else if (horasInicial == horasFinal) {
-            System.out.println(valorMaxima - valorMinimo);
-        } else
-            System.out.println(horasFinal - horasInicial);
-        return true;
+            resultado = valorMaximo - valorMinimo;
+        } else {
+            resultado = horasFinal - horasInicial;
+        }
+        return resultado;
     }
 }

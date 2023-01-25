@@ -12,18 +12,18 @@ public class QuestaoSete {
 
         scanner.close();
     }
-    public static boolean cartesiano(double x, double y){
+    public static String cartesiano(double x, double y){
         if (x == 0 && y == 0){
-            System.out.println("ORIGEM");
+           return "ORIGEM";
         } else if (x >= 0.01 && y >= 0.01) {
-            System.out.println("Q1");
+            return "Q1";
         } else if (x <= -0.01 && y >= 0.01) {
-            System.out.println("Q2");
+            return "Q2";
         } else if (x <= -0.01 && y <= -0.01) {
-            System.out.println("Q3");
+            return "Q3";
         } else if (x >= 0.01 && y <= -0.01){
-            System.out.println("Q4");
+            return "Q4";
         }
-        return true;
+        return "";
     }
 }

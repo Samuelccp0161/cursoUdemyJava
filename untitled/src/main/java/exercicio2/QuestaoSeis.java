@@ -12,18 +12,18 @@ public class QuestaoSeis {
 
         scanner.close();
     }
-    public static boolean intervalos(double valor){
+    public static String intervalos(double valor){
         if (valor < 0.00 || valor > 100){
-            System.out.println("Fora do intervalo");
+            return "Fora do intervalo";
         } else if (valor <= 25.00) {
-            System.out.println("Intervalo (0.25)");
+            return "([0,25]";
         } else if (valor <= 50.00) {
-            System.out.println("Intervalo (25.50)");
+            return "(25,50]";
         } else if (valor <= 75.00) {
-            System.out.println("Intervalo (50.75)");
+            return "(50,75]";
         } else if (valor <= 100.00) {
-            System.out.println("Intervalo (75.100)");
+            return "(75,100])";
         }
-        return true;
+        return "";
     }
 }
