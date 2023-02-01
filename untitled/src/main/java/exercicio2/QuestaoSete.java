@@ -9,7 +9,7 @@ public class QuestaoSete {
         double x = scanner.nextDouble();
         double y = scanner.nextDouble();
 
-
+        cartesiano(x, y);
         scanner.close();
     }
     public static String cartesiano(double x, double y){
