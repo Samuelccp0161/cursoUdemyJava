@@ -1,4 +1,4 @@
-package questao6;
+package exercicio6;
 
 import exercicio6.BankTransference;
 import org.junit.Test;
