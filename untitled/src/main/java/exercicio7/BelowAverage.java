@@ -12,6 +12,8 @@ public class BelowAverage {
         double sum = 0.0;
         double media = 0.0;
         double[] vector = new double[n];
+        double[] belowAverageVector = new double[number];
+
 
         for (int i = 0; i < vector.length; i++){
             vector[i] = scanner.nextDouble();
@@ -26,20 +28,12 @@ public class BelowAverage {
                 number += 1;
             }
         }
-        double[] belowAverageVector = new double[number];
-        ArrayList<Double> fd = new ArrayList<>();
-        for (int i = 0; i < vector.length; i++){
-            if (media > vector[i]){
-                belowAverageVector[i] = vector[i];
-//                numbersMinorsAverage = vector[i];
-//                belowAverageVector[i] = numbersMinorsAverage;
-                System.out.println(Arrays.toString(belowAverageVector));
-            }
-        }
+
         System.out.println(number);
 
         System.out.println(media);
         System.out.println(Arrays.toString(vector));
+        System.out.println(Arrays.toString(belowAverageVector));
 
 
         scanner.close();
