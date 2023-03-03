@@ -8,7 +8,7 @@ public class MaxNumberAndPosition {
 
         System.out.println("---------------QUAL O NÚMERO MAIOR E SUA POSIÇÃO NA LISTA-------------------");
 
-        System.out.print("Quantos numeros voce vai digitar: ");
+        System.out.print("Quantos números voce vai digitar: ");
 
         int n = scanner.nextInt();
         double[] listNumbers = new double[n];
@@ -32,12 +32,12 @@ public class MaxNumberAndPosition {
         scanner.close();
     }
     public static int maxNumber(double[] numbers){
-        double valueInitial = 0.0;
+        double value = 0.0;
         int positionElement = 0;
 
         for (int i = 0; i < numbers.length; i++){
-            if (numbers[i] > valueInitial){
-                valueInitial = numbers[i];
+            if (numbers[i] > value){
+                value = numbers[i];
                 positionElement = i;
             }
         }
