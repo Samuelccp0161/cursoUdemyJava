@@ -24,7 +24,7 @@ public class PairNumbers {
     public static int[] pairMain(int[] numbers){
         int quantity = 0;
 
-        System.out.println("----------------------------------");
+        System.out.println("---------------NUMEROS PARES-------------------");
         System.out.println("NUMEROS PARES:");
 
         for (int i = 0; i < numbers.length; i++){

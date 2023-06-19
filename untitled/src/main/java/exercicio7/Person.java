@@ -18,26 +18,47 @@ public class Person {
         ArrayList<String> nameList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("---------------NOME, IDADE, ALTURA-------------------");
+
+        System.out.print("Quantos números voce vai digitar: ");
+
         int n = scanner.nextInt();
+
         int result = 0;
         double sum = 0.0;
         double averageHeight = 0.0;
 
         for (int i = 0; i < n; i++){
+
+            System.out.print("NOME DA " + (i + 1) + " PESSOA: ");
             person.name = scanner.next();
+
+            System.out.print("IDADE DA " + (i + 1)+ " PESSOA: ");
             person.age = scanner.nextInt();
+
+            System.out.print("ALTURA DA " + (i + 1) + " PESSOA: ");
             person.height = scanner.nextDouble();
 
             sum += person.height;
+
+            System.out.println("---------------------------------");
 
             if (person.age < 16){
                 result += 1;
                 nameList.add(person.name);
             }
         }
+        System.out.print("ALTURA MÉDIA: ");
         System.out.println(sum / n);
-        System.out.println(result);
-        System.out.println(nameList);
+
+        System.out.print("Pessoas com menos de 16 anos: ");
+        System.out.println((100 * result) / n +"%");
+
+        System.out.print("Nome das pessoas com menos de 16 anos: ");
+        for (int i = 0; i < nameList.size(); i++){
+            System.out.println(nameList.get(i));
+        }
+        System.out.println("----------------------------------------------------------------------------");
 
         scanner.close();
     }

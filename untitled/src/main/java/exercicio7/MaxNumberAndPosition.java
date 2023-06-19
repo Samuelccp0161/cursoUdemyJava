@@ -17,7 +17,7 @@ public class MaxNumberAndPosition {
 
         for (int i = 0; i < listNumbers.length; i++){
             System.out.println("Digite um numero: ");
-            listNumbers[i] = scanner.nextInt();
+            listNumbers[i] = scanner.nextDouble();
         }
 
         System.out.println("----------------------------------");
