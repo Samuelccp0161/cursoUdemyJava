@@ -14,6 +14,10 @@ public class DataPeopleTest {
         DataPeople people5 = new DataPeople(1.75, "F");
 
         DataPeople[] people = {people1, people2, people3, people4, people5};
-        assertEquals(1.69, DataPeople.AverageHeightWoman(people));
+
+        assertEquals(1.69, DataPeople.averageHeightWoman(people), 0.005);
+        assertEquals(1.54, DataPeople.shorterHeight(people), 0.005);
+        assertEquals(1.83, DataPeople.greaterHeight(people), 0.005);
+        assertEquals(2, DataPeople.amountMen(people));
     }
 }
