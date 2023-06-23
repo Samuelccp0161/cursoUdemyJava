@@ -7,12 +7,12 @@ import static org.junit.Assert.assertEquals;
 
 public class QuestionTwoTest {
     @Test
-    public void cartesianoTest(){
-        Assert.assertEquals("primeiro", QuestaoDois.sistemaCartesiano(2, 2));
-        Assert.assertEquals("quarto", QuestaoDois.sistemaCartesiano(3, -2));
-        Assert.assertEquals("terceiro", QuestaoDois.sistemaCartesiano(-8, -1));
-        Assert.assertEquals("segundo", QuestaoDois.sistemaCartesiano(-7, 1));
-        Assert.assertEquals("", QuestaoDois.sistemaCartesiano(0, 2));
+    public void testCartesianSystem(){
+        Assert.assertEquals("first", QuestionTwo.cartesianSystem(2, 2));
+        Assert.assertEquals("fourth", QuestionTwo.cartesianSystem(3, -2));
+        Assert.assertEquals("third", QuestionTwo.cartesianSystem(-8, -1));
+        Assert.assertEquals("second", QuestionTwo.cartesianSystem(-7, 1));
+        Assert.assertEquals("", QuestionTwo.cartesianSystem(0, 2));
 
     }
 }

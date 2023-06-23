@@ -10,7 +10,7 @@ public class DataPeople {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------Older Age-------------------");
+        System.out.println("---------------OLDER AGE-------------------");
 
         System.out.print("How many elements will your vector have: ");
 

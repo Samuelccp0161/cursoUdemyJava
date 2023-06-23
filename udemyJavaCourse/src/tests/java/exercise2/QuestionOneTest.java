@@ -6,11 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class QuestionOneTest {
     @Test
-    public void PositivoOuNegativoTest(){
-        int numberNegativo = -12;
-        int numberPositivo = 12;
+    public void testPositiveOrNegative(){
+        int numberNegative = -12;
+        int numberPositive = 12;
 
-        assertEquals(-12, QuestaoUm.PositivoOuNegativo(numberNegativo));
-        assertEquals(12, QuestaoUm.PositivoOuNegativo(numberPositivo));
+        assertEquals(-12, QuestionOne.positiveOrNegative(numberNegative));
+        assertEquals(12, QuestionOne.positiveOrNegative(numberPositive));
     }
 }
