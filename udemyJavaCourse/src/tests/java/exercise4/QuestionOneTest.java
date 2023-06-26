@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 
 public class QuestionOneTest {
     @Test
-    public void numerosImparesTest(){
-        assertTrue(QuestaoUm.isImpar(7));
-        assertFalse(QuestaoUm.isImpar(8));
+    public void testIsOdd(){
+        assertTrue(QuestionOne.isOdd(7));
+        assertFalse(QuestionOne.isOdd(8));
     }
 }

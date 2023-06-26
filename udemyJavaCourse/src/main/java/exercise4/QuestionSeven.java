@@ -2,17 +2,15 @@ package exercise4;
 
 import java.util.Scanner;
 
-public class QuestaoCinco {
+public class QuestionSeven {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int n = scanner.nextInt();
-        int fatorial = 1;
 
-        for (int i = 0; i < n; i++){
-            fatorial *= (n - i);
+        for (int i = 1; i <= n; i++){
+            System.out.println( i + " " + (i * i)+ " " + (i * i * i));
         }
-        System.out.println(fatorial);
 
         scanner.close();
     }

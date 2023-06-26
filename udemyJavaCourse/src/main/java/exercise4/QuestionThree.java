@@ -2,7 +2,7 @@ package exercise4;
 
 import java.util.Scanner;
 
-public class QuestaoTres {
+public class QuestionThree {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,8 +14,11 @@ public class QuestaoTres {
             double z = scanner.nextDouble();
 
             double total = (2 * x + 3 * y + 5 * z) / (2 + 3 + 5);
-            System.out.printf("media ponderada: %.1f %n", total);
+            System.out.printf("weighted average: %.1f %n", total);
         }
         scanner.close();
+    }
+    public static double weightedAverage(){
+        return 0.00;
     }
 }
