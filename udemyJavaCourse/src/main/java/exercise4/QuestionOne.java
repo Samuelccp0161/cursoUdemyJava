@@ -8,6 +8,7 @@ public class QuestionOne {
         System.out.println("---------------------IS ODD-------------------");
 
         System.out.print("Type the desired number: ");
+
         int x = scanner.nextInt();
 
         System.out.println("---------------------------------------------");

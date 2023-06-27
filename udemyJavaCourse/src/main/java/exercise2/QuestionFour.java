@@ -27,7 +27,7 @@ public class QuestionFour {
     public static int differenceTime(int startTime, int endTime){
         int maximumValue = 24;
         int minimumValue = 0;
-        int result = 0;
+        int result;
 
         if (startTime > endTime) {
             minimumValue = maximumValue - startTime;

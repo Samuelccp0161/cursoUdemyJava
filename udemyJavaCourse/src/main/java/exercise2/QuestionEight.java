@@ -25,13 +25,13 @@ public class QuestionEight {
         if (salary <= 2000.00){
             return "Tax exempt";
         } else if (salary <= 3000.00) {
-            return (salary - 2000) * 0.08 + "" ;
+            return String.valueOf((salary - 2000) * 0.08);
             //8% de (salary - 2000).
         } else if (salary <= 4500.00){
-            return (salary - 3000) * 0.18 + 80 + "";
+            return String.valueOf((salary - 3000) * 0.18 + 80);
             //18% de (salary - 3000) + 80 (first rate amount).
         }else if (salary > 4500){
-            return (salary - 4500) * 0.28 + 80 + 270 + "";
+            return String.valueOf((salary - 4500) * 0.28 + 80 + 270);
             //28% de (salary - 4500) + 80 (first rate amount), 270 (second rate amount).
         }
         return "";

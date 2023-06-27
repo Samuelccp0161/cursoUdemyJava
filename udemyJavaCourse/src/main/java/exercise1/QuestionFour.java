@@ -32,9 +32,7 @@ public class QuestionFour {
         scanner.close();
     }
     public static double salary(int workedHours, double amountReceivedPerHour){
-        double totalSalary = amountReceivedPerHour * workedHours;
-
-        return totalSalary;
+        return amountReceivedPerHour * workedHours;
     }
 
 

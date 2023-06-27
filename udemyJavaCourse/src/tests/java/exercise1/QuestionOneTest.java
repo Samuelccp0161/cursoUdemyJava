@@ -10,8 +10,6 @@ public class QuestionOneTest {
         int x = 10;
         int y = 30;
 
-        QuestionOne.sum(x,y);
-
         assertEquals(40, QuestionOne.sum(x,y));
     }
 }

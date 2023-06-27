@@ -7,21 +7,21 @@ import static org.junit.Assert.*;
 public class StudentGradeTest {
 
     @Test
-    public void notaAlunoTest() {
-        StudentGrade nota = new StudentGrade(27.00, 31.00, 32.00);
+    public void testGradeStudent() {
+        StudentGrade grade = new StudentGrade("",27.00, 31.00, 32.00);
 
-        assertEquals(90.00, nota.nota(), 0.005);
+        assertEquals(90.00, grade.grade(), 0.005);
     }
     @Test
-    public void passAlunoTest() {
-        StudentGrade nota = new StudentGrade(27.00, 31.00, 32.00);
+    public void testPassStudent() {
+        StudentGrade grade = new StudentGrade("",27.00, 31.00, 32.00);
 
-        assertTrue(nota.isApproved());
+        assertTrue(grade.isApproved());
     }
     @Test
-    public void failedAlunoTest() {
-        StudentGrade nota = new StudentGrade(2.00, 31.00, 3.00);
+    public void testFailedStudent() {
+        StudentGrade grade = new StudentGrade("",2.00, 31.00, 3.00);
 
-        assertFalse(nota.isApproved());
+        assertFalse(grade.isApproved());
     }
 }

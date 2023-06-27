@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class QuestionOneTest {
     @Test
-    public void SenhaTest(){
+    public void testPassword(){
         assertFalse(passwordChecker("2200"));
         assertFalse(passwordChecker("1020"));
         assertFalse(passwordChecker("2022"));

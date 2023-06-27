@@ -1,21 +1,23 @@
 package exercise5.questao3;
 
 public class StudentGrade {
-    double nota1;
-    double nota2;
-    double nota3;
-    double resultadoNotas;
-    public StudentGrade(double nota1, double nota2, double nota3) {
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
-        resultadoNotas = nota1 + nota2 + nota3;
+    double grade1;
+    double grade2;
+    double grade3;
+    String name;
+    double resultGrade;
+    public StudentGrade(String name, double grade1, double grade2, double grade3) {
+        this.name = name;
+        this.grade1 = grade1;
+        this.grade2 = grade2;
+        this.grade3 = grade3;
     }
 
-    public double nota(){
-        return resultadoNotas;
+    public double grade(){
+        resultGrade = grade1 + grade2 + grade3;
+        return resultGrade;
     }
     public boolean isApproved(){
-        return resultadoNotas > 60;
+        return resultGrade > 60;
     }
 }

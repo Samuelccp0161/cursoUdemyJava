@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class QuestionSixTest {
     @Test
-    public void areasFigurasGeometricasTest(){
+    public void testAreasGeometricFigures(){
         double a = 3.0;
         double b = 4.0;
         double c = 5.2;

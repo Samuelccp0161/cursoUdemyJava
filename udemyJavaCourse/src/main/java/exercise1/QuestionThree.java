@@ -36,8 +36,7 @@ public class QuestionThree {
         scanner.close();
     }
     public static int difference(int a, int b, int c, int d){
-        int difference = a * b - c * d;
-        return difference;
+        return a * b - c * d;
     }
 
 }

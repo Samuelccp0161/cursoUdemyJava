@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BankTransferenceTest {
     @Test
-    public void depositTest() {
+    public void testDeposit() {
         BankTransference bankTransference = new BankTransference(0);
         bankTransference.deposit(200.00);
         assertEquals(200.00, bankTransference.value, 0.005);
@@ -14,7 +14,7 @@ public class BankTransferenceTest {
     }
 
     @Test
-    public void withdrawTest() {
+    public void testWithdraw() {
         BankTransference bankTransference = new BankTransference(0);
         bankTransference.deposit(200.00);
         bankTransference.withdraw(198.00);

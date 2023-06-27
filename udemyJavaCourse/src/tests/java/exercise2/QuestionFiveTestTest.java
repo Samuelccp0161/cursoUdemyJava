@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class QuestionFiveTest {
+public class QuestionFiveTestTest {
     @Test
     public void testAmountOfSnack(){
         assertEquals(10, QuestionFive.lunchValue(3, 2), 0.005);

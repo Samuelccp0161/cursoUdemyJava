@@ -5,20 +5,33 @@ import java.util.Scanner;
 public class QuestionThree {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("---------------------Weighted Average-------------------");
 
-        double n = scanner.nextDouble();
+        System.out.print("Type the desired number: ");
 
-        for (int i = 0; i < n; i++){
+        double number = scanner.nextDouble();
+
+        System.out.println("---------------------------------------------");
+
+        for (int i = 0; i < number; i++){
+            System.out.print("Type the value one desired: ");
             double x = scanner.nextDouble();
+            System.out.println("---------------------------------------------");
+            System.out.print("Type the value two desired: ");
             double y = scanner.nextDouble();
+            System.out.println("---------------------------------------------");
+            System.out.print("Type the value three desired: ");
             double z = scanner.nextDouble();
+            System.out.println("---------------------------------------------");
 
-            double total = (2 * x + 3 * y + 5 * z) / (2 + 3 + 5);
-            System.out.printf("weighted average: %.1f %n", total);
+            System.out.printf("weighted average: %.1f %n", weightedAverage(x,y,z));
+            System.out.println("---------------------------------------------");
+
         }
+        System.out.println("---------------------------------------------");
         scanner.close();
     }
-    public static double weightedAverage(){
-        return 0.00;
+    public static double weightedAverage(double x, double y, double z){
+        return (2 * x + 3 * y + 5 * z) / (2 + 3 + 5);
     }
 }

@@ -29,10 +29,7 @@ public class QuestionOne {
         scanner.close();
     }
     public static boolean passwordChecker(String password) {
-        if (password.equals("2002"))
-            return true;
-        else
-            return false;
+        return password.equals("2002");
     }
 
 

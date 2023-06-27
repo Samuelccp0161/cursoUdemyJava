@@ -10,16 +10,6 @@ public class QuestionFive {
 
         System.out.println("---------------PIECES, QUANTITY AND VALUES-------------------");
 
-        System.out.print("Code first Piece: ");
-        int codeFirstPiece = scanner.nextInt();
-
-        System.out.println("---------------------------------------------");
-
-        System.out.print("Code second Piece: ");
-        int codeSecondPiece = scanner.nextInt();
-
-        System.out.println("---------------------------------------------");
-
         System.out.print("Quantity first Piece: ");
         int quantityFirstPieces = scanner.nextInt();
 
