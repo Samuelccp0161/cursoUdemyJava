@@ -6,9 +6,9 @@ public class NegativeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------NUMEROS NEGATIVOS-------------------");
+        System.out.println("---------------NUMBERS NEGATIVE-------------------");
 
-        System.out.print("Quantos números voce vai digitar: ");
+        System.out.print("Type the quantity of numbers desired: ");
 
         int n = scanner.nextInt();
 
@@ -16,7 +16,7 @@ public class NegativeNumbers {
 
         System.out.println("----------------------------------");
 
-        System.out.println("Números negativos: ");
+        System.out.println("Numbers negative: ");
 
         numbersNegative(vector);
 

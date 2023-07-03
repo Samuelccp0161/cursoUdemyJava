@@ -6,38 +6,36 @@ public class EvenAverage {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------ABAIXO DA MEDIA-------------------");
+        System.out.println("---------------EVEN AVERAGE-------------------");
 
-        System.out.print("Quantos elementos vai ter o vetor: ");
+        System.out.print("Type quantity de numbers in vector: ");
 
         int n = scanner.nextInt();
-        int[] numeros = new int[n];
+        int[] numbers = new int[n];
 
-        for (int i = 0; i < numeros.length; i++){
-            System.out.println("Digite um numero: ");
-            numeros[i] = scanner.nextInt();
+        for (int i = 0; i < numbers.length; i++){
+            System.out.println("Type a number: ");
+            numbers[i] = scanner.nextInt();
 
         }
         if (n % 2 != 0){
-            System.out.println("NENHUM NUMERO PAR");
+            System.out.println("No even number");
         }else{
 
-            System.out.println("MEDIA DOS PARES: " + average(numeros));
+            System.out.println("Average even: " + average(numbers));
 
         }
-
-
         scanner.close();
     }
     public static int average(int[] vector){
         int sum = 0;
-        int media = 0;
+        int average = 0;
 
         for (int i = 0; i < vector.length; i++) {
             sum += vector[i];
-            media = sum / vector.length;
+            average = sum / vector.length;
         }
-        return media;
+        return average;
     }
     public static boolean isEven(int[] vector){
         for (int i = 0; i < vector.length; i++) {

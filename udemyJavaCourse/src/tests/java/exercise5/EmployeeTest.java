@@ -1,5 +1,6 @@
-package exercise5.questao2;
+package exercise5;
 
+import exercise5.Employee;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

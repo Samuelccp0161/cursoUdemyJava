@@ -1,5 +1,6 @@
-package exercise5.questao4;
+package exercise5;
 
+import exercise5.CurrencyConverter;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

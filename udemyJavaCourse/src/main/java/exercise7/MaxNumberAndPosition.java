@@ -6,9 +6,9 @@ public class MaxNumberAndPosition {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------QUAL O NÚMERO MAIOR E SUA POSIÇÃO NA LISTA-------------------");
+        System.out.println("---------------WHAT IS THE BIGGEST NUMBER AND ITS POSITION ON THE LIST-------------------");
 
-        System.out.print("Quantos números voce vai digitar: ");
+        System.out.print("Type quantity of numbers desired: ");
 
         int n = scanner.nextInt();
         double[] listNumbers = new double[n];
@@ -16,7 +16,7 @@ public class MaxNumberAndPosition {
         System.out.println("----------------------------------");
 
         for (int i = 0; i < listNumbers.length; i++){
-            System.out.println("Digite um numero: ");
+            System.out.println("Type a number: ");
             listNumbers[i] = scanner.nextDouble();
         }
 
@@ -24,9 +24,9 @@ public class MaxNumberAndPosition {
 
         int i = maxNumber(listNumbers);
 
-        System.out.println("MAIOR VALOR: " + listNumbers[i]);
+        System.out.println("Highest value: " + listNumbers[i]);
         System.out.println("----------------------------------");
-        System.out.println("POSIÇÃO DO MAIOR VALOR: " + i);
+        System.out.println("Highest value position: " + i);
         System.out.println("----------------------------------------------------------------------------");
 
         scanner.close();

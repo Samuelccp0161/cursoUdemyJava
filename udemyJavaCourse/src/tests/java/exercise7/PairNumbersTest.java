@@ -7,6 +7,6 @@ public class PairNumbersTest {
     @Test
     public void PairTest() {
         int[] pair = {4, 2, 14, 20};
-        assertTrue(PairNumbers.pair(pair));
+        assertTrue(PairNumbers.even(pair));
     }
 }

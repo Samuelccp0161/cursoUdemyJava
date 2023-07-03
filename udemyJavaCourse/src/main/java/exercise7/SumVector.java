@@ -7,25 +7,25 @@ public class SumVector {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("------------------------------SOMA DE VETORES-------------------------------");
+        System.out.println("------------------------------SUM OF VECTORS-------------------------------");
 
-        System.out.print("Quantos números na lista você vai digitar: ");
+        System.out.print("How many numbers in the list will you type: ");
 
         int numbers = scanner.nextInt();
 
         int[] vectorA = new int[numbers];
         int[] vectorB = new int[numbers];
 
-        System.out.println("----------------Digite os valores do vetor A------------------");
+        System.out.println("----------------Type the values of vector A------------------");
 
         for (int i = 0; i < vectorA.length; i++){
-            System.out.print("Digite um valor para o vetor A: ");
+            System.out.print("Type the values of vector A: ");
             vectorA[i] = scanner.nextInt();
         }
-        System.out.println("----------------Digite os valores do vetor B------------------");
+        System.out.println("----------------Type the values of vector B------------------");
 
         for (int i = 0; i < vectorB.length; i++){
-            System.out.print("Digite um valor para o vetor B: ");
+            System.out.print("Type the values of vector B: ");
             vectorB[i] = scanner.nextInt();
         }
 

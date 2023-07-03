@@ -1,5 +1,6 @@
-package exercise5.questao3;
+package exercise5;
 
+import exercise5.StudentGrade;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

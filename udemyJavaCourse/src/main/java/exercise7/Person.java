@@ -18,25 +18,25 @@ public class Person {
         ArrayList<String> nameList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------NOME, IDADE, ALTURA-------------------");
+        System.out.println("---------------NAME, AGE, Height-------------------");
 
-        System.out.print("Quantos números voce vai digitar: ");
+        System.out.print("Type the quantity of numbers desired: ");
 
-        int n = scanner.nextInt();
+        int numbers = scanner.nextInt();
 
         int result = 0;
         double sum = 0.0;
         double averageHeight = 0.0;
 
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < numbers; i++){
 
-            System.out.print("NOME DA " + (i + 1) + " PESSOA: ");
+            System.out.print("Name of " + (i + 1) + " people: ");
             person.name = scanner.next();
 
-            System.out.print("IDADE DA " + (i + 1)+ " PESSOA: ");
+            System.out.print("Age of " + (i + 1)+ " people: ");
             person.age = scanner.nextInt();
 
-            System.out.print("ALTURA DA " + (i + 1) + " PESSOA: ");
+            System.out.print("Height of " + (i + 1) + " people: ");
             person.height = scanner.nextDouble();
 
             sum += person.height;
@@ -48,13 +48,13 @@ public class Person {
                 nameList.add(person.name);
             }
         }
-        System.out.print("ALTURA MÉDIA: ");
-        System.out.println(sum / n);
+        System.out.print("Average height: ");
+        System.out.println(sum / numbers);
 
-        System.out.print("Pessoas com menos de 16 anos: ");
-        System.out.println((100 * result) / n +"%");
+        System.out.print("People under 16 years old: ");
+        System.out.println((100 * result) / numbers +"%");
 
-        System.out.print("Nome das pessoas com menos de 16 anos: ");
+        System.out.print("name of people under 16: ");
         for (int i = 0; i < nameList.size(); i++){
             System.out.println(nameList.get(i));
         }

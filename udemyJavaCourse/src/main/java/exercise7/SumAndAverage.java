@@ -7,30 +7,36 @@ public class SumAndAverage {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------NUMEROS NEGATIVOS-------------------");
+        System.out.println("---------------NUMBERS NEGATIVE-------------------");
 
-        System.out.print("Quantos números voce vai digitar: ");
+        System.out.print("Type the quantity of numbers desired: ");
 
-        int n = scanner.nextInt();
-        double soma = 0;
-        double media = 0;
+        int numbers = scanner.nextInt();
+        double sum = 0;
+        double average = 0;
 
-        double[] valores = new double[n];
+        double[] values = new double[numbers];
 
         System.out.println("----------------------------------");
-        for (int i = 0; i < valores.length; i++){
-            System.out.println("Qual o valor desejado: ");
-            valores[i] = scanner.nextDouble();
+        for (int i = 0; i < values.length; i++){
+            System.out.println("What is the desired value: ");
+            values[i] = scanner.nextDouble();
         }
         System.out.println("----------------------------------");
 
-        soma = Arrays.stream(valores).sum();
-        media = soma / n;
+        sum = Arrays.stream(values).sum();
+        average = sum / numbers;
 
-        System.out.println("VALORES: " + Arrays.toString(valores));
-        System.out.println("SOMA: " + soma);
-        System.out.println("MEDIA: " + media);
+        System.out.println("----------------------------------");
+        System.out.println("Values: " + Arrays.toString(values));
 
+        System.out.println("----------------------------------");
+        System.out.println("Sum: " + sum);
+
+        System.out.println("----------------------------------");
+        System.out.println("Average: " + average);
+
+        System.out.println("----------------------------------");
 
     }
     public static double sum(double[] n){

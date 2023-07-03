@@ -16,12 +16,17 @@ public class QuestionThree {
         for (int i = 0; i < number; i++){
             System.out.print("Type the value one desired: ");
             double x = scanner.nextDouble();
+
             System.out.println("---------------------------------------------");
+
             System.out.print("Type the value two desired: ");
             double y = scanner.nextDouble();
+
             System.out.println("---------------------------------------------");
+
             System.out.print("Type the value three desired: ");
             double z = scanner.nextDouble();
+
             System.out.println("---------------------------------------------");
 
             System.out.printf("weighted average: %.1f %n", weightedAverage(x,y,z));

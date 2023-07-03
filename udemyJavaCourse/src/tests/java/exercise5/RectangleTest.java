@@ -1,5 +1,6 @@
-package exercise5.questao1;
+package exercise5;
 
+import exercise5.Rectangle;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

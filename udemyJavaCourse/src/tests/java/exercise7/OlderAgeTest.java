@@ -12,6 +12,6 @@ public class OlderAgeTest {
         OlderAge person3 = new OlderAge("Joao", 16);
 
         OlderAge[] olderAges = {person1, person2, person3};
-        assertEquals("Carlos", OlderAge.getMaiorIdade(olderAges));
+        assertEquals("Carlos", OlderAge.getOlderPeople(olderAges));
     }
 }

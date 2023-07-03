@@ -32,19 +32,19 @@ public class DataPeople {
 
         System.out.println("----------------------SHORTER HEIGHT-----------------------");
 
-        System.out.printf("Menor altura = %.2f\n", DataPeople.shorterHeight(dataPeople));
+        System.out.printf("Shorter height: %.2f\n", DataPeople.shorterHeight(dataPeople));
 
         System.out.println("----------------------GREATER HEIGHT-----------------------");
 
-        System.out.printf("Maior altura = %.2f\n", DataPeople.greaterHeight(dataPeople));
+        System.out.printf("Greater height: %.2f\n", DataPeople.greaterHeight(dataPeople));
 
         System.out.println("----------------------QUANTITY OF MEN-----------------------");
 
-        System.out.println("Quantidade de homens: " + DataPeople.amountMen(dataPeople));
+        System.out.println("Amount of men: " + DataPeople.amountMen(dataPeople));
 
         System.out.println("----------------------AVERAGE HEIGHT OF WOMEN-----------------------");
 
-        System.out.printf("Media das alturas das mulheres: %.2f\n", DataPeople.averageHeightWoman(dataPeople));
+        System.out.printf("Average height of women: %.2f\n", DataPeople.averageHeightWoman(dataPeople));
 
         System.out.println("---------------------------------------------------------------------");
 

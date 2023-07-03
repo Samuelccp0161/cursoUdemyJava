@@ -7,28 +7,28 @@ public class BelowAverage {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------ABAIXO DA MEDIA-------------------");
+        System.out.println("---------------BELOW AVERAGE-------------------");
 
-        System.out.print("Quantos elementos vai ter o vetor: ");
+        System.out.print("Type the numbers of elements in vector: ");
 
         int n = scanner.nextInt();
         double[] vector = new double[n];
 
 
         for (int i = 0; i < vector.length; i++){
-            System.out.println("Digite um numero: ");
+            System.out.println("Type a number: ");
             vector[i] = scanner.nextDouble();
         }
 
         System.out.println("----------------------------------");
 
-        System.out.println("MEDIA DO VETOR = " + average(vector));
+        System.out.println("Average vector: " + average(vector));
 
         System.out.println("----------------------------------");
 
         for (int i = 0; i < vector.length; i++) {
             if (average(vector) > vector[i]) {
-                System.out.println("ELEMENTOS ABAIXO DA MEDIA: ");
+                System.out.println("Elements below average: ");
                 System.out.println(vector[i]);
             }
         }
@@ -39,23 +39,23 @@ public class BelowAverage {
     }
     public static double average(double[] vector){
         double sum = 0.0;
-        double media = 0.0;
+        double average = 0.0;
 
         for (int i = 0; i < vector.length; i++) {
             sum += vector[i];
-            media = sum / vector.length;
+            average = sum / vector.length;
         }
-        return media;
+        return average;
     }
     public static double[] belowAverage(double[] vector){
-        int qtd = 0;
+        int quantity = 0;
 
         for (int i = 0; i < vector.length; i++) {
             if (average(vector) > vector[i]) {
-                qtd += 1;
+                quantity += 1;
             }
         }
-        double[] elements = new double[qtd];
+        double[] elements = new double[quantity];
         int i = 0;
         for (double element : vector) {
             if (average(vector) > element){
