@@ -19,14 +19,7 @@ public class Matrix {
 
         System.out.println("----------------------------------");
 
-        int[][] matrix = new int[lines][columns];
-
-        for (int i=0; i < matrix.length; i++) {
-            for (int j=0; j < matrix[i].length; j++) {
-                matrix[i][j] = scanner.nextInt();
-            }
-            System.out.println(Arrays.deepToString(matrix));
-        }
+        int[][] matrix = getMatrix(scanner, lines, columns);
 
         System.out.println("----------------------------------");
 
@@ -35,8 +28,15 @@ public class Matrix {
 
         System.out.println("----------------------------------");
 
-        for (int i=0; i < matrix.length; i++) {
-            for (int j=0; j < matrix[i].length; j++) {
+        position(matrix, index);
+
+        System.out.println("----------------------------------");
+        scanner.close();
+    }
+
+    private static void position(int[][] matrix, int index) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == index) {
                     System.out.println("Position " + i + "," + j + ":");
                     if (j > 0) {
@@ -54,10 +54,19 @@ public class Matrix {
                 }
             }
         }
-        System.out.println("----------------------------------");
-        scanner.close();
     }
 
+    private static int[][] getMatrix(Scanner scanner, int lines, int columns) {
+        int[][] matrix = new int[lines][columns];
+
+        for (int i=0; i < matrix.length; i++) {
+            for (int j=0; j < matrix[i].length; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+            System.out.println(Arrays.deepToString(matrix));
+        }
+        return matrix;
+    }
 }
 
 
