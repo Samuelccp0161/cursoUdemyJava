@@ -10,7 +10,7 @@ public class MatrixTest {
     @Test
     public void testArray() {
 //        assertArrayEquals();
-    //teste do array.
+    //test do array.
     }
 
     @Test
