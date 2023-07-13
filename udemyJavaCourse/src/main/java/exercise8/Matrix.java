@@ -1,10 +1,8 @@
 package exercise8;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Matrix {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("---------------MATRIX-------------------");
@@ -19,7 +17,14 @@ public class Matrix {
 
         System.out.println("----------------------------------");
 
-        int[][] matrix = getMatrix(scanner, lines, columns);
+        System.out.println("Type the numbers desired for the matrix (" + lines + "x" + columns + "): ");
+        int[][] array = new int[lines][columns];
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[i].length;j++){
+                System.out.print("Type the number: ");
+                addElements(array, scanner.nextInt());
+            }
+        }
 
         System.out.println("----------------------------------");
 
@@ -28,44 +33,53 @@ public class Matrix {
 
         System.out.println("----------------------------------");
 
-        position(matrix, index);
+        System.out.println(position(array, index));
 
         System.out.println("----------------------------------");
+
         scanner.close();
     }
 
-    private static void position(int[][] matrix, int index) {
+    public static String position(int[][] matrix, int index) {
+        String position = "";
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == index) {
-                    System.out.println("Position " + i + "," + j + ":");
+                    if (!position.equals("")){
+                        position += "\n";
+                    }
+                    position += "Position " + i + "," + j + ":\n";
                     if (j > 0) {
-                        System.out.println("Left: " + matrix[i][j-1]);
+                        position += "Left: " + matrix[i][j - 1] + "\n";
                     }
-                    else if (i > 0) {
-                        System.out.println("Up: " + matrix[i-1][j]);
+                    if (i > 0) {
+                        position += "Up: " + matrix[i-1][j] + "\n";
                     }
-                    else if (j < matrix[i].length-1) {
-                        System.out.println("Right: " + matrix[i][j+1]);
+                    if (j < matrix[i].length-1) {
+                        position += "Right: " + matrix[i][j+1] +"\n";
                     }
-                    else if (i < matrix.length-1) {
-                        System.out.println("Down: " + matrix[i+1][j]);
+                    if (i < matrix.length-1) {
+                        position += "Down: " + matrix[i+1][j];
                     }
                 }
             }
         }
+
+        return position;
     }
-
-    private static int[][] getMatrix(Scanner scanner, int lines, int columns) {
-        int[][] matrix = new int[lines][columns];
-
-        for (int i=0; i < matrix.length; i++) {
-            for (int j=0; j < matrix[i].length; j++) {
-                matrix[i][j] = scanner.nextInt();
+    public static void addElements(int[][] array, int x){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[i][j] == 0){
+                  array[i][j] = x;
+                    return;
+                }
             }
-            System.out.println(Arrays.deepToString(matrix));
         }
-        return matrix;
+    }
+    public static int[][] getMatrix(int[][] array) {
+    return array;
     }
 }
 

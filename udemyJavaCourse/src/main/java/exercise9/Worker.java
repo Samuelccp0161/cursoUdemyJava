@@ -40,7 +40,6 @@ public class Worker {
         for (int i = 0; i < quantityOfContract; i++) {
             hourContract.hours = scanner.nextInt();
             hourContract.valuePerHour = scanner.nextDouble();
-//            String data = "00/00/0000";
             String data = scanner.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("00/00/0000");
             Date date = format.parse(data);
