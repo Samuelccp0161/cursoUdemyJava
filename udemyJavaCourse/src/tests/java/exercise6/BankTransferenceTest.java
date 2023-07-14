@@ -12,7 +12,6 @@ public class BankTransferenceTest {
         assertEquals(200.00, bankTransference.value, 0.005);
 
     }
-
     @Test
     public void testWithdraw() {
         BankTransference bankTransference = new BankTransference(0);

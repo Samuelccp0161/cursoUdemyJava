@@ -1,48 +1,35 @@
 package exercise9;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
-import java.util.logging.Level;
 
-public class Worker {
-    public static void main(String[] args) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
-
-        Worker worker = new Worker("", WorkerLevel.JUNIOR, 0.00 );
-
-        worker.name = scanner.nextLine();
-//        worker.level = scanner.nextInt();
-        worker.baseSalary = scanner.nextDouble();
-
-        worker.addContract(1);
-        System.out.println();
-
-
-
-        scanner.close();
-    }
+public class  Worker {
     String name;
-    Level level;
+    LevelEnum level;
     double baseSalary;
 
-    public Worker(String name, WorkerLevel level, double baseSalary) {
+    public Worker(String name, LevelEnum level, double baseSalary) {
         this.name = name;
-        level = level;
+        this.level = level;
         this.baseSalary = baseSalary;
     }
-    public void addContract(int quantityOfContract) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
-        HourContract hourContract = new HourContract(new Date(), 0,0);
-        for (int i = 0; i < quantityOfContract; i++) {
-            hourContract.hours = scanner.nextInt();
-            hourContract.valuePerHour = scanner.nextDouble();
-            String data = scanner.nextLine();
-            SimpleDateFormat format = new SimpleDateFormat("00/00/0000");
-            Date date = format.parse(data);
+    List<Contract> contracts = new ArrayList<>();
+    public void addContract(Contract contract){
+        contracts.add(contract);
+    }
+    public void removeContract(Contract contract){
+        contracts.remove(contract);
+    }
+    public double income(int month, int year){
+        double result = baseSalary;
+        for (int i = 0; i < contracts.size(); i++){
+            int contractMonth = contracts.get(i).date.getMonth() + 1;
+            int contractYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(contracts.get(i).date));
+            if (contractMonth == month && contractYear == year){
+                result += contracts.get(i).totalValue();
+            }
         }
+        return result;
     }
 }
