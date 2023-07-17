@@ -5,5 +5,6 @@ public enum LevelEnum {
 
     public int valueLevel;
     LevelEnum(int valueLevel){
+
     }
 }

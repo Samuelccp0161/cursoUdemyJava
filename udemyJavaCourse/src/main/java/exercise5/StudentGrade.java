@@ -59,6 +59,7 @@ public class StudentGrade {
         return resultGrade;
     }
     public boolean isApproved(){
+        resultGrade = grade1 + grade2 + grade3;
         return resultGrade > 60;
     }
     public double differenceValue(){
