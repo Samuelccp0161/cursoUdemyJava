@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Post {
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -72,5 +73,18 @@ public class Post {
         for (Comment comment : comments)
             stringBuilder.append(comment.getText() + "\n");
         return stringBuilder.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Post post = (Post) o;
+        return likes == post.likes && Objects.equals(date, post.date) && Objects.equals(title, post.title) && Objects.equals(content, post.content) && Objects.equals(comments, post.comments);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(date, title, content, likes, comments);
     }
 }
