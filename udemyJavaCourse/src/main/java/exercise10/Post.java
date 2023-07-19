@@ -12,6 +12,8 @@ public class Post {
     String title;
     String content;
     int likes;
+    int size;
+    List<Post> posts = new ArrayList<>();
     private final List<Comment> comments = new ArrayList<>();
 
     public Post(Date date, String title, String content, int likes) {
@@ -19,6 +21,12 @@ public class Post {
         this.title = title;
         this.content = content;
         this.likes = likes;
+    }
+    public void addPosts(Post post){
+        posts.add(post);
+    }
+    public int getSizePost(){
+        return posts.size();
     }
 
     public Date getDate() {
