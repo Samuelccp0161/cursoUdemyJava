@@ -34,8 +34,12 @@ public class Main {
 
         Client client = new Client(name,email,dateFormatted);
 
+        System.out.print("Type the process status: ");
         String status = scanner.nextLine();
+
         Order order = new Order(dateActual,  OrderStatus.valueOf(status), client);
+
+        System.out.println("----------------------------------");
 
         System.out.print("How many items you desire: ");
         int quantityProduct = scanner.nextInt();
@@ -51,12 +55,12 @@ public class Main {
 
             System.out.println("----------------------------------");
 
-            System.out.println("Type the price of product: ");
+            System.out.print("Type the price of product: ");
             double price = scanner.nextDouble();
 
             System.out.println("----------------------------------");
 
-            System.out.println("Type the quantity of product: ");
+            System.out.print("Type the quantity of product: ");
             int quantity = scanner.nextInt();
             scanner.nextLine();
 
@@ -66,7 +70,10 @@ public class Main {
 
             order.addItem(orderItem);
         }
+
         System.out.println(order.summary());
+
+        System.out.println("----------------------------------");
 
         scanner.close();
     }

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Post {
-    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     Date date;
     String title;
     String content;

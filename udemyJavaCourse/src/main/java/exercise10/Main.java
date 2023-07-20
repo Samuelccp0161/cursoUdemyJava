@@ -3,7 +3,7 @@ package exercise10;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class main {
+public class Main {
     public static void main(String[] args) throws ParseException {
         System.out.println("---------------POST AND COMMENT-------------------");
 
