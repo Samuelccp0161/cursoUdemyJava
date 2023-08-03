@@ -3,7 +3,7 @@ package exercise1;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class QuestionFiveTestTest {
+public class QuestionFiveTest {
     @Test
     public void testPiecesCalculation(){
         int quantityPiecesOne = 1;
