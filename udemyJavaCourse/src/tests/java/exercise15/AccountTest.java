@@ -24,7 +24,7 @@ public class AccountTest {
     public void testWithdrawOutOfLimit(){
         Account account = new Account(8021, "Bob Brown", 500.00, 300.00);
         try {
-            account.withdraw(400.00);
+            account.withdraw(800.00);
             fail("Should have thrown an exception!!!");
         }catch (WithdrawException e){
             assertEquals("The amount exceeds withdraw limit", e.getMessage());
